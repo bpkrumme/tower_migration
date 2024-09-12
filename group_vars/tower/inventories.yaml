@@ -1,0 +1,11 @@
+---
+controller_inventories:
+  - name: "Ansible Test Inventory"
+    description: ""
+    organization: "Default"
+    host_filter: ""
+  - name: "Ansible Satellite Inventory"
+    description: ""
+    organization: "Default"
+    host_filter: ""
+...

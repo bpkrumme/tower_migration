@@ -1,0 +1,9 @@
+---
+controller_hosts:
+  - name: "testhost1.bk.lab"
+    description: ""
+    inventory: "Ansible Test Inventory"
+  - name: "testhost2.bk.lab"
+    description: ""
+    inventory: "Ansible Test Inventory"
+...
