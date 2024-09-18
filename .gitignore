@@ -15,3 +15,5 @@ inventory
 tower_migration_ee/context
 tower_migration_ee/files/ansible.cfg
 ansible.cfg
+group_vars/tower/*.yaml
+group_vars/controller/*.yaml
