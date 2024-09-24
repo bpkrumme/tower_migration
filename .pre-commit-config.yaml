@@ -1,5 +1,4 @@
-# See https://pre-commit.com for more information
-# See https://pre-commit.com/hooks.html for more hooks
+---
 ci:
   # This section is specific to pre-commit.ci, telling it to create a pull request
   # to update the linter version tag every month.
@@ -10,27 +9,11 @@ ci:
   # skip:
   #   - ansible-lint
 repos:
-  - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v3.2.0
-    hooks:
-    -   id: trailing-whitespace
-    -   id: end-of-file-fixer
-    -   id: check-yaml
-    -   id: check-added-large-files
-  - repo: https://gitlab.cee.redhat.com/infosec-public/developer-workbench/tools.git
-    rev: rh-pre-commit-2.3.0
-    hooks:
-      # If you have not run this hook on your system before, it may prompt you to
-      # log in for patterns, and you will need to try again.
-      #
-      # Docs: https://source.redhat.com/departments/it/it-information-security/leaktk/leaktk_components/rh_pre_commit
-      - id: rh-pre-commit
-      # - id: rh-pre-commit.commit-msg # Optional for commit-msg attestation
   - repo: https://github.com/ansible/ansible-lint
-    rev: ... # put latest release tag from https://github.com/ansible/ansible-lint/releases/
+    rev: v24.9.2
     hooks:
       - id: ansible-lint
         # Uncomment if you need the full Ansible community bundle instead of ansible-core:
         # additional_dependencies:
         #   - ansible
-
+...
