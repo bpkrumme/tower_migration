@@ -1,5 +1,5 @@
 Export Tower Resources:
-    ansible-navigator run export_tower_resources.yml -i inventory -l tower -e "env:tower" -m stdout --eev ./group_vars/tower:/tmp/synced:Z --vault-password-file .vault_password --pull-arguments=--tls-verify=false
+    ansible-navigator run playbooks/export_tower_resources.yml -i inventory -l tower -e "env:tower" -m stdout --eev ./group_vars/tower:/tmp/synced:Z --vault-password-file .vault_password --pull-arguments=--tls-verify=false
 
 Import Controller Resources:
-    ansible-navigator run import_controller_resources.yml -i inventory -l controller -e "env:controller" -m stdout --vault-password-file .vault_password --pull-arguments=--tls-verify=false
+    ansible-navigator run playbooks/import_controller_resources.yml -i inventory -l controller -e "env:controller" -m stdout --vault-password-file .vault_password --pull-arguments=--tls-verify=false
