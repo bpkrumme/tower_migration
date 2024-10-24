@@ -1,6 +1,6 @@
 ---
 - name: Create initial filetree for Tower/Automation Controller CaC
-  hosts: all
+  hosts: localhost
   become: false
   gather_facts: false
   vars:
@@ -38,14 +38,14 @@
         state: absent
   roles:
     - infra.controller_configuration.filetree_create
-  tasks:
-    - name: Synchronize filetree from remote
-      ansible.posix.synchronize:
-        src: "{{ item }}"
-        dest: /tmp/synced
-        mode: pull
-      with_items:
-        - /tmp/filetree_output/
+#  tasks:
+#    - name: Synchronize filetree from remote
+#      ansible.posix.synchronize:
+#        src: "{{ item }}"
+#        dest: /tmp/synced
+#        mode: pull
+#      with_items:
+#        - /tmp/filetree_output/
   post_tasks:
     - name: Delete the Auth Token
       ansible.builtin.uri:
