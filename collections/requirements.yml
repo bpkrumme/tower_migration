@@ -1,5 +1,9 @@
 ---
 collections:
+  - name: ansible.controller
+  - name: ansible.platform
+  - name: ansible.tower
+  - name: ansible.utils
   - name: infra.controller_configuration
   - name: infra.ah_configuration
   - name: infra.aap_utilities
